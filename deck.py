@@ -19,6 +19,7 @@ class Deck:
         self.pos = 0
 
     def get_next_card(self):
+        assert(not self.is_empty())
         self.pos += 1
         return self.cards[self.pos - 1]
     
@@ -34,6 +35,7 @@ class Deck:
 
         print(s)
         print()
+    
     
     # Checks to see if we're at the end of the deck yet
     def is_empty(self):

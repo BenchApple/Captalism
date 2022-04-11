@@ -4,8 +4,7 @@
 from enum import Enum, auto
 
 class Cards(Enum):
-    ACE_SPADES = 0
-    TWO_SPADES = auto()
+    TWO_SPADES = 0
     THREE_SPADES = auto()
     FOUR_SPADES = auto()
     FIVE_SPADES = auto()
@@ -17,8 +16,8 @@ class Cards(Enum):
     JACK_SPADES = auto()
     QUEEN_SPADES = auto()
     KING_SPADES = auto()
+    ACE_SPADES = auto()
 
-    ACE_DIAMONDS = auto()
     TWO_DIAMONDS = auto()
     THREE_DIAMONDS = auto()
     FOUR_DIAMONDS = auto()
@@ -31,8 +30,8 @@ class Cards(Enum):
     JACK_DIAMONDS = auto()
     QUEEN_DIAMONDS = auto()
     KING_DIAMONDS = auto()
+    ACE_DIAMONDS = auto()
 
-    ACE_CLUBS = auto()
     TWO_CLUBS = auto()
     THREE_CLUBS = auto()
     FOUR_CLUBS = auto()
@@ -45,8 +44,8 @@ class Cards(Enum):
     JACK_CLUBS = auto()
     QUEEN_CLUBS = auto()
     KING_CLUBS = auto()
+    ACE_CLUBS = auto()
 
-    ACE_HEARTS = auto()
     TWO_HEARTS = auto()
     THREE_HEARTS = auto()
     FOUR_HEARTS = auto()
@@ -59,3 +58,4 @@ class Cards(Enum):
     JACK_HEARTS = auto()
     QUEEN_HEARTS = auto()
     KING_HEARTS = auto()
+    ACE_HEARTS = auto()
