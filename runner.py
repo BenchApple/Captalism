@@ -2,6 +2,7 @@
 
 # This file runs the game and directs each player what to do
 
+import requests
 from player import Player, hand_to_string
 from position import Position
 from deck import Deck
@@ -32,6 +33,32 @@ def main():
         hands_left.remove(c)
 
         players[i].set_hand(hands[c])
+    
+    for p in players:
+        print(p)
+
+    # Perform the card swaps
+    # For the president player, have them choose the two cards to get rid of
+    print()
+    for i in range(0, len(players)):
+        print("Player in position " + str(players[i].pos) + ":")
+        print(str(players[i]))
+        offloads = players[i].choose_offloads()
+        requests = players[i].choose_requests(players[num_players - 1 - i])
+
+        for off in offloads:
+            players[num_players - 1 - i].add_card_to_hand(players[i].hand[off])
+            players[i].remove_card_from_hand(players[i].hand[off])
+        
+        for req in requests:
+            players[i].add_card_to_hand(players[num_players - 1 - i].hand[req])
+            players[num_players - 1 - i].remove_card_from_hand(players[num_players - 1 - i].hand[req])
+        
+        print(players[i])
+        print(players[num_players - 1 - i])
+
+        input()
+        
     
     for p in players:
         print(p)
