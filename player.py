@@ -36,3 +36,10 @@ class Player:
     def __str__(self) -> str:
         s = "Position: %s; Hand: %s" % (self._pos, hand_to_string(self._hand))
         return s
+    
+    def choose_hand(self, hands_left):
+        choice = -1
+        while choice not in hands_left:
+            choice = int(input("Player in Position " + str(self._pos) + " - Which deck would you like? " + str(hands_left) + " "))
+        
+        return choice
